@@ -1,5 +1,3 @@
-import { transform } from "../node_modules/typescript/lib/typescript"
-
 export class Character {
     x: number = 0
     y: number = 0

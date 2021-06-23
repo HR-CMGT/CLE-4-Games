@@ -1,9 +1,9 @@
 
-import { Hook } from "./Hook.js"
-import { Tube } from "./Tube.js"
-import { Level } from "./Level.js"
-import { Character } from "./Character.js"
-import { Belt as Belt } from "./Belt.js"
+import { Hook } from "./hook.js"
+import { Tube } from "./tube.js"
+import { Level } from "./level.js"
+import { Character } from "./character.js"
+import { Belt as Belt } from "./belt.js"
 
 class Game {
     /*
@@ -154,12 +154,12 @@ class Game {
 
     works on my machine ¯\_(ツ)_/¯
     */
-    private clickHandler = (e: MouseEvent) => {
+    private clickHandler (e: MouseEvent) {
 
         // this.hook.shootHook(e.clientX, e.clientY)
-
-        let target: EventTarget | null = e.target
-        if (target.id! == "true") {
+        
+        let target: EventTarget | null = e.target!
+        if (target.id == "true") {
             this.currentLevel += 1
             this.displayText(true)
             this.createLevel(this.levels[this.currentLevel])

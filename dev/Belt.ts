@@ -1,7 +1,3 @@
-// import { transform } from "../node_modules/typescript/lib/typescript"
-
-import { textChangeRangeIsUnchanged } from "../node_modules/typescript/lib/typescript"
-
 export class Belt {
 
     public x: number
