@@ -56,7 +56,7 @@ export class Character {
 
         this.character.classList.add("characters")
         var myString: string = String(isCorrect);
-        this.character.id = myString
+        this.character.setAttribute("id", myString)
         this.character.innerText = this.value
     }
 

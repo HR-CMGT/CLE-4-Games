@@ -46,7 +46,7 @@ class Game {
         this.icon.style.transform = `translate(${this.iconX}px, ${this.iconY}px)`
 
         //adding click event listener
-        document.body.addEventListener("click", this.clickHandler)
+        document.body.addEventListener("click", (e:MouseEvent) => this.clickHandler(e))
 
         if (this.currentLevel == 0) {
 
@@ -156,8 +156,6 @@ class Game {
     */
     private clickHandler (e: MouseEvent) {
 
-        // this.hook.shootHook(e.clientX, e.clientY)
-        
         let target: EventTarget | null = e.target!
         if (target.id == "true") {
             this.currentLevel += 1
